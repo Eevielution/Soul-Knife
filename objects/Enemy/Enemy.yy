@@ -14,7 +14,10 @@
     "name":"Soul Knife Demo",
     "path":"Soul Knife Demo.yyp",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"movementParent",
+    "path":"objects/movementParent/movementParent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -20,6 +20,7 @@
   "name":"Soul Knife Demo",
   "resources":[
     {"id":{"name":"Enemy","path":"objects/Enemy/Enemy.yy",},},
+    {"id":{"name":"movementParent","path":"objects/movementParent/movementParent.yy",},},
     {"id":{"name":"originalPlayer","path":"objects/originalPlayer/originalPlayer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
