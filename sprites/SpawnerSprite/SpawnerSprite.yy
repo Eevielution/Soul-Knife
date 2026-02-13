@@ -1,11 +1,11 @@
 {
   "$GMSprite":"v2",
-  "%Name":"EnemySpawnerSprite",
+  "%Name":"SpawnerSprite",
   "bboxMode":0,
-  "bbox_bottom":40,
-  "bbox_left":21,
-  "bbox_right":39,
-  "bbox_top":22,
+  "bbox_bottom":63,
+  "bbox_left":0,
+  "bbox_right":63,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -21,7 +21,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"4fe0ba4a-15ef-42fd-b25e-ab09649f683d","blendMode":0,"displayName":"default","isLocked":false,"name":"4fe0ba4a-15ef-42fd-b25e-ab09649f683d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"EnemySpawnerSprite",
+  "name":"SpawnerSprite",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"EnemySpawnerSprite",
+    "%Name":"SpawnerSprite",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"EnemySpawnerSprite",
+    "name":"SpawnerSprite",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,7 +69,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3edaa7af-78ca-4ab3-8107-f1361b91bf0e","path":"sprites/EnemySpawnerSprite/EnemySpawnerSprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3edaa7af-78ca-4ab3-8107-f1361b91bf0e","path":"sprites/SpawnerSprite/SpawnerSprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"c5ef87f1-bc2b-4099-aa80-2d0d22f1b0c7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
