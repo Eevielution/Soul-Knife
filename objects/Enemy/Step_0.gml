@@ -14,3 +14,8 @@ else
 		timer = 0
 	}
 }
+if(hp <= 0) {
+	
+	alarm[0] = 1;
+	
+}

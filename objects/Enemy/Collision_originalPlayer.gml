@@ -1,5 +1,3 @@
-if(isPlayer)
-{
-	instance_destroy()
+with(other) {
+	hp = hp - 5;
 }
-
