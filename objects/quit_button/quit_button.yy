@@ -1,15 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"Object5",
-  "eventList":[],
+  "%Name":"quit_button",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"Object5",
+  "name":"quit_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Soul Knife Demo",
-    "path":"Soul Knife Demo.yyp",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"button_parent",
+    "path":"objects/button_parent/button_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"quit_button_sprite",
+    "path":"sprites/quit_button_sprite/quit_button_sprite.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
