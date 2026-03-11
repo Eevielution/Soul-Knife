@@ -1,0 +1,1 @@
+global.PlayerHighlightExisits = true; 
