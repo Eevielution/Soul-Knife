@@ -3,6 +3,7 @@ with(other) {
 		check();
 	}
 	hp = hp - 1
+	show_debug_message($"Soul Knife has slashes an enemy, hp at: {hp}");
 }
 function check() {
 	if (other.id != global.currentPlayer) { // can occasionally lag game if knife hits player

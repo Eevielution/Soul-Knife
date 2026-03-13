@@ -47,5 +47,5 @@ if(speed > 3)
 	speed = 3;
 }
 
-show_debug_message(speed)
+//show_debug_message(speed)
 
