@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"OriginalPlayerSprite",
-    "path":"sprites/OriginalPlayerSprite/OriginalPlayerSprite.yy",
+    "name":"khile_main",
+    "path":"sprites/khile_main/khile_main.yy",
   },
   "spriteMaskId":null,
   "visible":true,

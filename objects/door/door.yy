@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"DoorEntrance",
+  "%Name":"door",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"originalPlayer","path":"objects/originalPlayer/originalPlayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Enemy","path":"objects/Enemy/Enemy.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"DoorEntrance",
+  "name":"door",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"Door_centered",
-    "path":"sprites/Door_centered/Door_centered.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
