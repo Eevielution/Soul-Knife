@@ -33,8 +33,15 @@ else
 {
 	if(!attacking)
 	{
-		speed = 1.4
-		direction = point_direction(x, y, global.currentPlayer.x, global.currentPlayer.y)
+		speed = 1.1
+		if(!instance_exists(PlayerObject) || global.currentPlayer.hp <= 0)
+		{
+			game_restart()
+		}
+		else
+		{
+			direction = point_direction(x, y, global.currentPlayer.x, global.currentPlayer.y)
+		}
 		if(lengthdir_x(direction, direction) > 0)
 		{
 			image_xscale = -.5
