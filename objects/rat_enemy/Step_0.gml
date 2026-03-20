@@ -79,8 +79,9 @@ else
 		}
 	}
 }
-if(hp <= 0) {
-	alarm[0] = 1;
+if(hp <= 0)
+{
+	alarm[0] = 1
 }
 
 

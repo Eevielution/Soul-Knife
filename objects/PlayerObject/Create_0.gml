@@ -4,3 +4,4 @@ image_yscale = 1/4
 cooldown = false
 attacking = 0
 frame_attack = 0
+knifeOut = true

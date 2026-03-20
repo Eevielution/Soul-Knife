@@ -1,18 +1,23 @@
 
-if (instance_exists(global.currentPlayer)){
-	// this radius should work for most sprites, if we keep them square / rectangular. change if needed
-	radius = 0
-	
-	x = global.currentPlayer.x
-	y = global.currentPlayer.y
-
-	currentDirection = point_direction(x, y, mouse_x, mouse_y);
-
-direction = global.currentPlayer.direction + 90
-
-image_angle = currentDirection - 90;
+if (instance_exists(global.currentPlayer))
+{
+	playerX = global.currentPlayer.x
+	playerY = global.currentPlayer.y
+	if(point_distance(x, y, playerX, playerY) < 4)
+	{
+		x = playerX
+		y = playerY
+		speed = 0
+	}
+	else
+	{
+		speed = 2
+		direction = point_direction(x, y, playerX, playerY)
+	}
+	image_angle = point_direction(x, y, mouse_x, mouse_y) - 90
 }
-else {
+else
+{
 	instance_destroy(PlayerObject); 
 } 
 

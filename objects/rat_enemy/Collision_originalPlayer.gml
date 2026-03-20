@@ -1,3 +1,4 @@
-with(other) {
-	hp -= 1;
+with(other)
+{
+	hp -= 1
 }

@@ -1,16 +1,24 @@
 if(!cooldown)
 {
-	if (instance_exists(global.currentPlayer)){
-		radius = 20
-	
-		centerX = global.currentPlayer.x
-		centerY = global.currentPlayer.y
-		currentDirection = point_direction(centerX, centerY, mouse_x, mouse_y);
-
-	slash = instance_create_layer(centerX + lengthdir_x(radius, currentDirection), centerY + lengthdir_y(radius, currentDirection), "Instances", DaggerSlashObject);
-	slash.image_xscale = 1/4
-	slash.image_yscale = 1/4
-	cooldown = true
-	alarm[0] = 15
+	if (instance_exists(global.currentPlayer))
+	{
+		if(global.currentPlayer.object_index == originalPlayer || global.currentPlayer.object_index == rat_enemy && knifeOut)
+		{
+			radius = 20
+			centerX = global.currentPlayer.x
+			centerY = global.currentPlayer.y
+			currentDirection = point_direction(centerX, centerY, mouse_x, mouse_y)
+			slash = instance_create_layer(centerX + lengthdir_x(radius, currentDirection), centerY + lengthdir_y(radius, currentDirection), "Instances", DaggerSlashObject)
+			slash.image_xscale = 1/4
+			slash.image_yscale = 1/4
+			cooldown = true
+			alarm[0] = 15
+		}
+		else if(global.currentPlayer.object_index == rat_enemy && !knifeOut)
+		{
+			show_debug_message("rat attack")
+		}
+		
 	}
+	
 }
