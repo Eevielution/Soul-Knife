@@ -16,7 +16,7 @@ if(!cooldown)
 		}
 		else if(global.currentPlayer.object_index == rat_enemy && !knifeOut)
 		{
-			show_debug_message("rat attack")
+			global.currentPlayer.attacking = true
 		}
 		
 	}

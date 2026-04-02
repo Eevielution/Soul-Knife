@@ -1,9 +1,61 @@
 if(isPlayer)
 {	
 	event_inherited();
-	var movement_x = key_right - key_left;
-	var movement_y = key_down - key_up;
-	if(movement_x > 0)
+	var movement_x = key_right - key_left
+	var movement_y = key_down - key_up
+	if(attacking)
+	{
+
+		movement_x = 0
+		movement_y = 0
+		sprite_index = rat_attack
+		
+		if(frame_attack = 0)
+		{
+			image_index = 0
+			attack_angle = point_direction(x, y, mouse_x, mouse_y)
+		}
+		if(lengthdir_x(attack_angle, attack_angle) > 0)
+		{
+			image_xscale = -.5
+		}
+		else
+		{
+			image_xscale = .5
+		}
+		show_debug_message(image_index)
+		show_debug_message(frame_attack)
+		show_debug_message("")
+		frame_attack += 1
+		if(frame_attack < 20)
+		{
+			speed = 0
+		}
+		else if(frame_attack >= 20 && frame_attack < 50)
+		{
+			speed = 2
+			direction = attack_angle
+		}
+		else if(frame_attack >= 50 && frame_attack < 70)
+		{
+			speed = 0
+			show_debug_message("end speed")
+		}
+		else if(frame_attack >= 70)
+		{
+			show_debug_message("end attack")
+			attacking = false
+			frame_attack = 0
+			image_index = 0
+		}
+		else
+		{
+			attacking = false
+			frame_attack = 0
+			image_index = 0
+		}
+	}
+	else if(movement_x > 0)
 	{
 		image_xscale = -.5
 		sprite_index = rat_side
@@ -28,6 +80,7 @@ if(isPlayer)
 		image_xscale = .5
 		sprite_index = rat_main
 	}
+
 }
 else
 {
@@ -58,7 +111,6 @@ else
 		attacking = true
 		sprite_index = rat_attack
 		frame_attack += 1
-		show_debug_message(frame_attack)
 		if(frame_attack < 30)
 		{
 			speed = 0
