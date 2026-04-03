@@ -2,8 +2,9 @@ if(!cooldown)
 {
 	if (instance_exists(global.currentPlayer))
 	{
-		if(global.currentPlayer.object_index == originalPlayer || global.currentPlayer.object_index == rat_enemy && knifeOut)
+		if(knifeOut)
 		{
+			global.currentPlayer.attacking = true
 			radius = 20
 			centerX = global.currentPlayer.x
 			centerY = global.currentPlayer.y
@@ -12,7 +13,7 @@ if(!cooldown)
 			slash.image_xscale = 1/4
 			slash.image_yscale = 1/4
 			cooldown = true
-			alarm[0] = 15
+			alarm[0] = 36
 		}
 		else if(global.currentPlayer.object_index == rat_enemy && !knifeOut)
 		{

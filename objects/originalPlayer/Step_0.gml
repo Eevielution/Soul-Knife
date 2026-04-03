@@ -1,7 +1,50 @@
 event_inherited();
 var movement_x = key_right - key_left;
 var movement_y = key_down - key_up;
-if(movement_x > 0)
+if(attacking)
+{
+	movement_x = 0
+	movement_y = 0
+	if(frame_attack = 0)
+	{
+		attack_angle = point_direction(x, y, mouse_x, mouse_y)
+		show_debug_message(attack_angle)
+		if(attack_angle >= 225 && attack_angle <= 315)
+		{
+			sprite_index = khile_downslash
+		}
+		else if((attack_angle > 315 && attack_angle <= 360) || (attack_angle >= 0 && attack_angle < 45))
+		{
+			sprite_index = khile_sideslash
+		}
+		else if(attack_angle >= 45 && attack_angle <= 135)
+		{
+			sprite_index = khile_upslash
+		}
+			else if(attack_angle > 135 && attack_angle < 225)
+		{
+			sprite_index = khile_sideslash
+			image_xscale = -1
+		}
+		else
+		{
+			sprite_index = khile_sidestab
+		}
+		image_index = 0
+	}
+	if(frame_attack < 37)
+	{
+		speed = 0
+		frame_attack += 1
+	}
+	else
+	{
+		attacking = false
+		frame_attack = 0
+		image_index = 0
+	}
+}
+else if(movement_x > 0)
 {
 	image_xscale = 1
 	sprite_index = khile_side

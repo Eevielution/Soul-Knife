@@ -23,9 +23,6 @@ if(isPlayer)
 		{
 			image_xscale = .5
 		}
-		show_debug_message(image_index)
-		show_debug_message(frame_attack)
-		show_debug_message("")
 		frame_attack += 1
 		if(frame_attack < 20)
 		{
@@ -39,11 +36,9 @@ if(isPlayer)
 		else if(frame_attack >= 50 && frame_attack < 70)
 		{
 			speed = 0
-			show_debug_message("end speed")
 		}
 		else if(frame_attack >= 70)
 		{
-			show_debug_message("end attack")
 			attacking = false
 			frame_attack = 0
 			image_index = 0
