@@ -8,7 +8,7 @@
   "instanceCreationOrder":[],
   "isDnd":false,
   "layers":[
-    {"$GMRTileLayer":"","%Name":"wall","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"wall","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":23,"SerialiseWidth":48,"TileCompressedData":[
+    {"$GMRTileLayer":"","%Name":"Walls","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Walls","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":23,"SerialiseWidth":48,"TileCompressedData":[
           -20,55,-28,-2147483648,20,55,51,36,53,36,53,36,53,36,53,36,53,36,53,36,53,36,53,1073741875,55,-28,-2147483648,
           2,55,1879048245,-16,-2147483648,2,1073741866,55,-28,-2147483648,2,55,1879048228,-16,-2147483648,2,1073741864,
           55,-28,-2147483648,2,55,1879048245,-16,-2147483648,2,1073741866,55,-28,-2147483648,2,55,1879048228,-16,
@@ -25,7 +25,7 @@
           805306421,805306410,805306421,805306410,805306421,805306410,805306419,55,-28,-2147483648,-20,55,-28,
           -2147483648,-20,55,-28,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tile_Tileset1","path":"tilesets/tile_Tileset1/tile_Tileset1.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRTileLayer":"","%Name":"floor","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"floor","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":23,"SerialiseWidth":48,"TileCompressedData":[
+    {"$GMRTileLayer":"","%Name":"Floor","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Floor","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":23,"SerialiseWidth":48,"TileCompressedData":[
           -19,85,-29,-2147483648,-19,85,-29,-2147483648,-19,85,1,0,-28,-2147483648,-19,85,1,0,-28,-2147483648,
           -19,85,1,0,-28,-2147483648,-19,85,1,0,-28,-2147483648,-19,85,1,0,-28,-2147483648,-19,85,1,0,-28,-2147483648,
           -19,85,1,0,-28,-2147483648,-19,85,1,0,-28,-2147483648,-19,85,1,0,-28,-2147483648,-19,85,1,0,-28,-2147483648,

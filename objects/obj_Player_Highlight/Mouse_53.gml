@@ -9,7 +9,7 @@ if(!cooldown)
 			centerX = global.currentPlayer.x
 			centerY = global.currentPlayer.y
 			currentDirection = point_direction(centerX, centerY, mouse_x, mouse_y)
-			slash = instance_create_layer(centerX + lengthdir_x(radius, currentDirection), centerY + lengthdir_y(radius, currentDirection), "Instances", obj_Dagger_Slash_Object)
+			slash = instance_create_layer(centerX + lengthdir_x(radius, currentDirection), centerY + lengthdir_y(radius, currentDirection), "Instances", obj_Dagger_Slash)
 			slash.image_xscale = 1/4
 			slash.image_yscale = 1/4
 			cooldown = true
