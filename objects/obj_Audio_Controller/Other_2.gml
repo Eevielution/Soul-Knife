@@ -1,0 +1,1 @@
+audio_play_sound(bgm_Main_Theme_2_22_26,1,true);

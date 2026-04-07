@@ -20,7 +20,7 @@
   "option_sci_usesci":true,
   "option_spine_licence":false,
   "option_steam_app_id":"0",
-  "option_template_description":null,
+  "option_template_description":"A roguelike game in which you switch bodies with the enemies you kill, giving you new abilities and replenishing your health. Upgrade your knife to give you more benefits for switching bodies or remove some of the downsides. Go through the dungeon to fight the final boss and transfer your soul into their body so you can start all over again!",
   "option_template_icon":"${base_options_dir}/main/template_icon.png",
   "option_template_image":"${base_options_dir}/main/template_image.png",
   "option_window_colour":255,
