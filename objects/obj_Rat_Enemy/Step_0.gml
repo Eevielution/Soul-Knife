@@ -53,26 +53,31 @@ if(isPlayer)
 	else if(movement_x > 0)
 	{
 		image_xscale = -.5
+		image_yscale = .5
 		sprite_index = spr_Rat_Side
 	}
 	else if(movement_x < 0)
 	{
 		image_xscale = .5
+		image_yscale = .5
 		sprite_index = spr_Rat_Side
 	}
 	else if(movement_y > 0)
 	{
 		image_xscale = .5
+		image_yscale = .5
 		sprite_index = spr_Rat_Down
 	}
 	else if(movement_y < 0)
 	{
 		image_xscale = .5
+		image_yscale = .5
 		sprite_index = spr_Rat_Side
 	}
 	else
 	{
 		image_xscale = .5
+		image_yscale = .5
 		sprite_index = spr_Rat_Main
 	}
 
@@ -93,15 +98,16 @@ else
 		if(lengthdir_x(direction, direction) > 0)
 		{
 			image_xscale = -.5
+			image_yscale = .5
 			sprite_index = spr_Rat_Side
 		}
 		else
 		{
 			image_xscale = .5
+			image_yscale = .5
 			sprite_index = spr_Rat_Side
 		}
 	}
-	if(distance_to_object(global.currentPlayer) < 15 || attacking)
 	{
 		attacking = true
 		sprite_index = spr_Rat_Attack
@@ -128,7 +134,10 @@ else
 }
 if(hp <= 0)
 {
-	alarm[0] = 1
+    // Enemy rat dies — just destroy it, do NOT transform
+    if (!isPlayer) {
+        instance_destroy();
+    }
 }
 
 

@@ -1,4 +1,5 @@
 /// @description Establish key vars
+depth = -1; // same as obj_Player, in front of highlight
 
 isPlayer = false
 isOriginal = false

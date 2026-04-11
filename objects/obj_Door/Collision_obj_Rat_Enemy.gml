@@ -1,16 +1,28 @@
-show_debug_message("door object is hit by player")
-if (other.isPlayer) {
-	if (loc_name == 0) {
-		global.currentPlayer.x = 160;
-		global.currentPlayer.y = 150;
-	} else if (loc_name == 1) {
-		global.currentPlayer.x = 160;
-		global.currentPlayer.y = 40;
-	} else if (loc_name == 2) {
-		global.currentPlayer.x = 266;
-		global.currentPlayer.y = 90;
-	} else if (loc_name == 3) {
-		global.currentPlayer.x = 55;
-		global.currentPlayer.y = 90;
-	}
+// Only trigger for the player-controlled rat, not enemy rats
+if (!other.isPlayer) exit;
+
+// Same door-transition logic as Collision_obj_Player
+var opp_sides = [1, 0, 3, 2];
+global.entry_door_side = opp_sides[loc_name];
+
+var candidates;
+switch (global.entry_door_side) {
+    case 0: // TOP door
+        candidates = [rm_16x9, rm_16x18, rm_18x32];
+        break;
+    case 1: // BOTTOM door
+        candidates = [rm_16x9, rm_16x18, rm_18x32, rm_L];
+        break;
+    case 2: // LEFT door
+        candidates = [rm_16x9, rm_16x18, rm_18x32];
+        break;
+    case 3: // RIGHT door
+        candidates = [rm_16x9, rm_16x18, rm_18x32, rm_L];
+        break;
+    default:
+        show_debug_message("obj_Door: invalid loc_name " + string(loc_name));
+        exit;
 }
+
+var pick = candidates[irandom(array_length(candidates) - 1)];
+room_goto(pick);

@@ -1,3 +1,4 @@
+depth = 0; // behind player, in front of doors
 global.PlayerHighlightExisits = true;
 image_xscale = 1/4
 image_yscale = 1/4
@@ -5,3 +6,4 @@ cooldown = false
 attacking = false
 frame_attack = 0
 knifeOut = true
+revert_hold_timer = 0 // counts up while right-click held in rat form
