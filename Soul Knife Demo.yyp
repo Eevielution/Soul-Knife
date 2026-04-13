@@ -54,6 +54,7 @@
     {"id":{"name":"spr_Door_Centered","path":"sprites/spr_Door_Centered/spr_Door_Centered.yy",},},
     {"id":{"name":"spr_Door_Wide","path":"sprites/spr_Door_Wide/spr_Door_Wide.yy",},},
     {"id":{"name":"spr_Game_Over","path":"sprites/spr_Game_Over/spr_Game_Over.yy",},},
+    {"id":{"name":"spr_Health_bar","path":"sprites/spr_Health_bar/spr_Health_bar.yy",},},
     {"id":{"name":"spr_Khile_Down_Slash","path":"sprites/spr_Khile_Down_Slash/spr_Khile_Down_Slash.yy",},},
     {"id":{"name":"spr_Khile_Down_Stab","path":"sprites/spr_Khile_Down_Stab/spr_Khile_Down_Stab.yy",},},
     {"id":{"name":"spr_Khile_Down","path":"sprites/spr_Khile_Down/spr_Khile_Down.yy",},},

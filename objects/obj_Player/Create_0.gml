@@ -24,5 +24,11 @@ hsp = 0
 vsp = 0
 
 
-max_hp = 50
-hp = max_hp
+hp = 100
+max_hp = hp
+
+// player health bar
+healthbar_width = 100;
+healthbar_height = 12;
+healthbar_x = (180 / 2) - (healthbar_width / 2);
+healthbar_y = 20;
