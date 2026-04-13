@@ -4,6 +4,7 @@ if(!cooldown)
 	{
 		if(knifeOut)
 		{
+			show_debug_message("attacking")
 			global.currentPlayer.attacking = true
 			radius = 20
 			centerX = global.currentPlayer.x

@@ -3,7 +3,7 @@ if(isPlayer)
 	event_inherited();
 	var movement_x = key_right - key_left
 	var movement_y = key_down - key_up
-	if(attacking)
+	if(attacking && !PlayerObject.knifeOut)
 	{
 
 		movement_x = 0
@@ -126,9 +126,13 @@ else
 		}
 	}
 }
-if(hp <= 0)
+if(hp <= 0 && PlayerObject.knifeOut)
 {
 	alarm[0] = 1
+}
+else if(hp <= 0 && !PlayerObject.knifeOut)
+{
+	instance_destroy()
 }
 
 
