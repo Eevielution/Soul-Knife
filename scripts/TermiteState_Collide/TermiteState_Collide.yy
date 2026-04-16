@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"TermiteState_Collide",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TermiteState_Collide",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
