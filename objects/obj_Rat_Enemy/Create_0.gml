@@ -1,4 +1,5 @@
 /// @description Establish key vars
+event_inherited(); // defines collision() from obj_Movement_Parent
 depth = -1; // same as obj_Player, in front of highlight
 
 isPlayer = false
@@ -7,6 +8,7 @@ isRat = true
 
 max_hp = 10;
 hp = max_hp;
+bleed_rate = 1/120 // inherited by player-rat
 immunity = false
 attacking = false
 frame_attack = 0

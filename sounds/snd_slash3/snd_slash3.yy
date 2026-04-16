@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"bgm_Main_Theme_2_22_26",
+  "%Name":"snd_slash3",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":112.34043,
+  "duration":0.72931975,
   "exportDir":"",
-  "name":"bgm_Main_Theme_2_22_26",
+  "name":"snd_slash3",
   "parent":{
-    "name":"Audio",
-    "path":"folders/Audio.yy",
+    "name":"Sound Effects",
+    "path":"folders/Audio/Sound Effects.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"bgm_Main_Theme_2_22_26.mp3",
-  "volume":0.58,
+  "soundFile":"snd_slash3.wav",
+  "volume":0.75,
 }

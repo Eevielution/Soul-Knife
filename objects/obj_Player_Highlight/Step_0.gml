@@ -16,6 +16,9 @@ if (global.currentPlayer.object_index == obj_Rat_Enemy && mouse_check_button(mb_
         var _rat = global.currentPlayer;
         var _rx = _rat.x;
         var _ry = _rat.y;
+        // Restore saved human HP
+        global.player_hp = global.human_hp;
+        knifeOut = true; // restore knife for human form
         // Mark rat as non-player before creating obj_Player so Create_0 doesn't self-destruct
         _rat.isPlayer = false;
         _rat.persistent = false;

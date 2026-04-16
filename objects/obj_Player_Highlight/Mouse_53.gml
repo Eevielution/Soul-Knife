@@ -4,7 +4,11 @@ if(!cooldown)
 	{
 		if(knifeOut)
 		{
+			show_debug_message("attacking")
 			global.currentPlayer.attacking = true
+			// Random slash sound
+			var _slash_sounds = [snd_slash1, snd_slash2, snd_slash3];
+			audio_play_sound(_slash_sounds[irandom(2)], 1, false);
 			radius = 20
 			centerX = global.currentPlayer.x
 			centerY = global.currentPlayer.y
@@ -17,6 +21,7 @@ if(!cooldown)
 		}
 		else if(global.currentPlayer.object_index == obj_Rat_Enemy && !knifeOut)
 		{
+			audio_play_sound(snd_enemy_attack, 1, false);
 			global.currentPlayer.attacking = true
 		}
 		

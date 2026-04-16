@@ -1,3 +1,6 @@
+// HP bar moved to obj_Player_Highlight Draw_64.gml
+// (obj_Camera is invisible so its Draw GUI events never fire)
+
 if (!camera_debug_mode) exit;
 
 draw_set_alpha(0.7);
