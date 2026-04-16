@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"TermiteState_Attack_Dash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TermiteState_Attack_Dash",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
