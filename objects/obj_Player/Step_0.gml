@@ -70,6 +70,14 @@ else
 	sprite_index = spr_Khile_Main
 }
 
+// Decay hit cooldown
+if (hit_cooldown > 0) hit_cooldown -= 1;
+
 if (hp <= 0) {
+	audio_play_sound(snd_gameover, 1, false);
 	room_goto(rm_Game_Over)
 }
+
+// Bleed — constant HP drain
+hp -= bleed_rate;
+hp = max(hp, 0);

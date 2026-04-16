@@ -1,4 +1,8 @@
 // This alarm is now ONLY triggered by right-click transform (Mouse_54 on obj_Player_Highlight)
+// Save human HP so we can restore it if/when the player reverts
+global.human_hp = global.currentPlayer.hp;
+audio_play_sound(snd_transform, 1, false);
+
 isPlayer = true
 persistent = true   // survive room transitions while player-controlled
 attacking = false

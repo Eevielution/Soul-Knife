@@ -25,4 +25,6 @@ switch (global.entry_door_side) {
 }
 
 var pick = candidates[irandom(array_length(candidates) - 1)];
+audio_play_sound(snd_door, 1, false);
+global.player_hp = global.currentPlayer.hp; // persist HP across room
 room_goto(pick);

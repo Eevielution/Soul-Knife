@@ -1,18 +1,22 @@
-/// @description Origin-point push-out — only activates when the entity's origin is inside this solid
+/// @description Origin-point push-out — only applies to the current player
+
+if (!variable_global_exists("currentPlayer") || !instance_exists(global.currentPlayer)) exit;
 
 var tx1 = bbox_left;
 var ty1 = bbox_top;
 var tx2 = bbox_right;
 var ty2 = bbox_bottom;
 
-with (obj_Movement_Parent) {
-    // Only act when the entity's origin point is inside the solid
-    if (!point_in_rectangle(x, y, tx1, ty1, tx2, ty2)) exit;
+var _p = global.currentPlayer;
 
-    // If touching a door, let it pass through
-    if (place_meeting(x, y, obj_Door)) exit;
+// Only act when the player's origin point is inside this solid
+if (!point_in_rectangle(_p.x, _p.y, tx1, ty1, tx2, ty2)) exit;
 
-    // Push origin to the nearest edge
+// If touching a door, let it pass through
+if (place_meeting(_p.x, _p.y, obj_Door)) exit;
+
+// Push origin to the nearest edge
+with (_p) {
     var dist_left  = x  - tx1;
     var dist_right = tx2 - x;
     var dist_top   = y  - ty1;
