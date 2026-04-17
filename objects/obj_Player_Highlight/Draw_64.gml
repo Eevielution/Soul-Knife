@@ -34,3 +34,12 @@ draw_set_color(c_white);
 draw_text(_bx + _bw / 2, _by - 2, "HP  " + string(floor(_hp)) + " / " + string(_max));
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+
+// --- Creatures Slain counter (top-right) ---
+draw_set_font(-1);
+draw_set_halign(fa_right);
+draw_set_valign(fa_top);
+draw_set_color(c_white);
+draw_text(_gw - 12, 12, "Creatures Slain: " + string(global.creatures_slain));
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);

@@ -8,22 +8,45 @@ x = global.currentPlayer.x;
 y = global.currentPlayer.y;
 speed = 0;
 
-// This lets you turn back into a human
-if (global.currentPlayer.object_index == obj_Rat_Enemy && mouse_check_button(mb_right)) {
+// --- Animal-form door check (uses the animal's own mask, not the highlight's tiny one) ---
+var _cp_idx = global.currentPlayer.object_index;
+if (_cp_idx == obj_Rat_Enemy || _cp_idx == obj_Termite_Enemy) {
+    var _door = noone;
+    with (global.currentPlayer) {
+        _door = instance_place(x, y, obj_Door);
+    }
+    if (_door != noone) {
+        var _opp = [1, 0, 3, 2];
+        global.entry_door_side = _opp[_door.loc_name];
+        var _cands;
+        switch (global.entry_door_side) {
+            case 0: _cands = [rm_16x9, rm_16x18, rm_18x32]; break;
+            case 1: _cands = [rm_16x9, rm_16x18, rm_18x32, rm_L]; break;
+            case 2: _cands = [rm_16x9, rm_16x18, rm_18x32]; break;
+            case 3: _cands = [rm_16x9, rm_16x18, rm_18x32, rm_L]; break;
+            default: exit;
+        }
+        audio_play_sound(snd_door, 1, false);
+        global.player_hp = global.human_hp; // preserve human HP, not the animal's
+        room_goto(_cands[irandom(array_length(_cands) - 1)]);
+        exit;
+    }
+}
+
+// This lets you turn back into a human (from rat or termite)
+if ((global.currentPlayer.object_index == obj_Rat_Enemy || global.currentPlayer.object_index == obj_Termite_Enemy) && mouse_check_button(mb_right)) {
     revert_hold_timer++;
     if (revert_hold_timer >= 180) {
         revert_hold_timer = 0;
-        var _rat = global.currentPlayer;
-        var _rx = _rat.x;
-        var _ry = _rat.y;
-        // Restore saved human HP
+        var _animal = global.currentPlayer;
+        var _rx = _animal.x;
+        var _ry = _animal.y;
         global.player_hp = global.human_hp;
-        knifeOut = true; // restore knife for human form
-        // Mark rat as non-player before creating obj_Player so Create_0 doesn't self-destruct
-        _rat.isPlayer = false;
-        _rat.persistent = false;
+        knifeOut = true;
+        _animal.isPlayer = false;
+        _animal.persistent = false;
         var _new_player = instance_create_layer(_rx, _ry, "Instances", obj_Player);
-        with (_rat) { instance_destroy(); }
+        with (_animal) { instance_destroy(); }
     }
 } else {
     revert_hold_timer = 0;

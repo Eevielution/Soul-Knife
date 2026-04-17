@@ -1,10 +1,18 @@
-/// @description On room start, place player at entry door and remove it (no going back)
-if (global.entry_door_side == -1) exit; // First room or non-door transition
+/// @description On room start, place player-termite at entry door
+if (!isPlayer) exit;
+
+// Re-link camera to this persistent instance
+if (instance_exists(obj_Camera)) {
+    obj_Camera.follow_target = id;
+}
+
+if (global.entry_door_side == -1) exit;
 
 var entry_door = noone;
 with (obj_Door) {
     if (loc_name == global.entry_door_side) {
         entry_door = id;
+        break;
     }
 }
 
@@ -12,7 +20,6 @@ if (entry_door != noone) {
     x = entry_door.x;
     y = entry_door.y;
 
-    // Push the player 48px inward so they aren't clipping the wall
     switch (global.entry_door_side) {
         case 0: y += 48; break; // entered via top wall, push down
         case 1: y -= 48; break; // entered via bottom wall, push up
@@ -26,5 +33,4 @@ if (entry_door != noone) {
 // 0.3s invincibility so enemies can't hit the player immediately on entry
 hit_cooldown = 18;
 
-// Reset so we don't re-run this on the next non-door room load
 global.entry_door_side = -1;

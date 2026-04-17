@@ -12,6 +12,7 @@ bleed_rate = 1/120 // inherited by player-rat
 immunity = false
 attacking = false
 frame_attack = 0
+hit_cooldown = 0
 
 timer = 0
 timerStop = random(100) + 50

@@ -157,9 +157,16 @@ if(hp <= 0 && obj_Player_Highlight.knifeOut)
 {
     // Enemy rat dies — just destroy it, do NOT transform
     if (!isPlayer) {
-        // Heal the player on kill
         audio_play_sound(snd_kill, 1, false);
-        global.currentPlayer.hp = min(global.currentPlayer.hp + 10, global.currentPlayer.max_hp);
+        // Heal: if player is transformed, heal the paused human HP (not the animal)
+        // If player is human, heal currentPlayer directly
+        var _cp = global.currentPlayer;
+        if (_cp.object_index == obj_Rat_Enemy || _cp.object_index == obj_Termite_Enemy) {
+            global.human_hp = min(global.human_hp + 10, 50);
+        } else {
+            _cp.hp = min(_cp.hp + 10, _cp.max_hp);
+        }
+        global.creatures_slain++;
         instance_destroy();
     }
 }
@@ -167,6 +174,13 @@ else if(hp <= 0 && !obj_Player_Highlight.knifeOut)
 {
     if (!isPlayer) {
         audio_play_sound(snd_kill, 1, false);
+        var _cp = global.currentPlayer;
+        if (_cp.object_index == obj_Rat_Enemy || _cp.object_index == obj_Termite_Enemy) {
+            global.human_hp = min(global.human_hp + 10, 50);
+        } else {
+            _cp.hp = min(_cp.hp + 10, _cp.max_hp);
+        }
+        global.creatures_slain++;
         instance_destroy();
     }
 }

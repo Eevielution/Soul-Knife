@@ -30,4 +30,7 @@ if (entry_door != noone) {
     instance_destroy(entry_door);
 }
 
+// 0.3s invincibility so enemies can't hit the player immediately on entry
+hit_cooldown = 18;
+
 global.entry_door_side = -1;
