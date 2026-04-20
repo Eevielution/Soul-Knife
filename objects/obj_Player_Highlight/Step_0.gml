@@ -26,9 +26,12 @@ if (_cp_idx == obj_Rat_Enemy || _cp_idx == obj_Termite_Enemy) {
             case 3: _cands = [rm_16x9, rm_16x18, rm_18x32, rm_L]; break;
             default: exit;
         }
-        audio_play_sound(snd_door, 1, false);
         global.player_hp = global.human_hp; // preserve human HP, not the animal's
-        room_goto(_cands[irandom(array_length(_cands) - 1)]);
+        if (!instance_exists(obj_Transition)) {
+            audio_play_sound(snd_door, 1, false);
+            global.transition_room = _cands[irandom(array_length(_cands) - 1)];
+            instance_create_layer(0, 0, "Instances", obj_Transition);
+        }
         exit;
     }
 }

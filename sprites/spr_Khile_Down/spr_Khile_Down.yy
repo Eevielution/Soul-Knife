@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"khilesprites",
-    "path":"folders/Sprites/khilesprites.yy",
+    "name":"khileSprites",
+    "path":"folders/Sprites/khileSprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
