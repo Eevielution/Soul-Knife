@@ -15,7 +15,7 @@ camera_apply(camera);
 gpu_set_blendmode(bm_subtract);
 var scale = 1;
 with (obj_torch){
-	draw_sprite_ext(spr_Torch_Light, 0, self.x,self.y, scale, scale, 0, c_white, 1);
+	draw_sprite_ext(spr_Torch_Light, 0, self.x-8,self.y-8, scale, scale, 0, c_white, 1);
 }
 gpu_set_blendmode(bm_normal);
 
