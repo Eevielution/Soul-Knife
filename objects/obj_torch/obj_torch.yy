@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_torch",
+  "%Name":"obj_Torch",
   "eventList":[],
   "managed":true,
-  "name":"obj_torch",
+  "name":"obj_Torch",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",

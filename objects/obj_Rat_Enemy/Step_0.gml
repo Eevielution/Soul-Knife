@@ -1,5 +1,22 @@
 if(isPlayer)
 {	
+	// Block all input during a room transition
+	if (instance_exists(obj_Transition)) {
+		hp -= bleed_rate;
+		hp = max(hp, 0);
+		if (hp <= 0) {
+			var _rx = x;
+			var _ry = y;
+			global.player_hp = global.human_hp;
+			obj_Player_Highlight.knifeOut = true;
+			isPlayer = false;
+			persistent = false;
+			instance_create_layer(_rx, _ry, "Instances", obj_Player);
+			instance_destroy();
+		}
+		exit;
+	}
+
 	event_inherited();
 
 	// Door proximity check — typed collision unreliable with small scaled mask
@@ -16,7 +33,10 @@ if(isPlayer)
 				case 3: candidates = [rm_16x9, rm_16x18, rm_18x32, rm_L]; break;
 			}
 			global.player_hp = global.currentPlayer.hp;
-			room_goto(candidates[irandom(array_length(candidates) - 1)]);
+			if (!instance_exists(obj_Transition)) {
+				global.transition_room = candidates[irandom(array_length(candidates) - 1)];
+				instance_create_layer(0, 0, "Instances", obj_Transition);
+			}
 			break;
 		}
 	}
@@ -90,9 +110,10 @@ if(isPlayer)
 	}
 	else if(movement_y < 0)
 	{
+		// Moving up — use the neutral sprite to avoid an upside-down flip
 		image_xscale = .5
 		image_yscale = .5
-		sprite_index = spr_Rat_Side
+		sprite_index = spr_Rat_Main
 	}
 	else
 	{
