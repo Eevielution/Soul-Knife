@@ -7,9 +7,9 @@ var _pct = clamp(_hp / _max, 0, 1);
 var _gw  = display_get_gui_width();
 var _gh  = display_get_gui_height();
 var _bw  = 200;
-var _bh  = 32;
-var _bx  = 160;
-var _by  = 64;
+var _bh  = 12;
+var _bx  = _gw / 2 - _bw / 2;
+var _by  = _gh - 32;
 
 draw_set_alpha(1);
 

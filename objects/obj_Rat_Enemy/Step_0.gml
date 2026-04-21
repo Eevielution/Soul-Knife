@@ -91,8 +91,8 @@ if(isPlayer)
 	else if(movement_y < 0)
 	{
 		image_xscale = .5
-		image_yscale = -.5
-		sprite_index = spr_Rat_Down
+		image_yscale = .5
+		sprite_index = spr_Rat_Side
 	}
 	else
 	{
