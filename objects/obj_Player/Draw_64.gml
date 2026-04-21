@@ -1,6 +1,3 @@
-scale = 1.5
-draw_sprite_ext(spr_Icon_Health, 0, 10, 10, scale, scale, 0, c_white, 1);
-
-icon_scale = 1.4
-draw_sprite_ext(spr_Khile_Icon, 0, 60, 50, icon_scale - 0.11, icon_scale, 0, c_white, 1);
-
+/// @desc Health Bar
+//draw_sprite(spr_Health_bar, 0, healthbar_x, healthbar_y);
+draw_sprite_stretched(spr_Health_bar, 0, healthbar_x, healthbar_y, (hp/max_hp) * healthbar_width, healthbar_height);

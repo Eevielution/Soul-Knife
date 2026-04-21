@@ -22,15 +22,7 @@ function TermiteState_Attack_Dash(){
 	} else if (place_meeting(nx, ny, obj_Solid)) {
 		hspeed = 0; vspeed = 0;
 		state = TERMITESTATE.COLLIDE;
-	} else {
-		var _blocking_rock = instance_place(nx, ny, obj_Rock);
-		if (_blocking_rock != noone && !_blocking_rock.destroyed) {
-			hspeed = 0; vspeed = 0;
-			state = TERMITESTATE.COLLIDE;
-		}
-	}
-	
-	if (dx > 160 or dy > 160) {
+	} else if (dx > 160 or dy > 160) {
 		hspeed = 0; vspeed = 0;
 		state = TERMITESTATE.COLLIDE;
 	}

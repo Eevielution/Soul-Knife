@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"khileSprites",
-    "path":"folders/Sprites/khileSprites.yy",
+    "name":"khilesprites",
+    "path":"folders/Sprites/khilesprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

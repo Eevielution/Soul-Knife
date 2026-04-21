@@ -1,16 +1,4 @@
 event_inherited();
-
-// Block all player input and movement during a room transition
-if (instance_exists(obj_Transition)) {
-    if (hp <= 0) {
-        audio_play_sound(snd_gameover, 1, false);
-        room_goto(rm_Game_Over);
-    }
-    hp -= bleed_rate;
-    hp = max(hp, 0);
-    exit;
-}
-
 var movement_x = key_right - key_left;
 var movement_y = key_down - key_up;
 if(attacking)
