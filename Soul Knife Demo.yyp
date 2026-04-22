@@ -39,7 +39,6 @@
     {"id":{"name":"obj_Camera","path":"objects/obj_Camera/obj_Camera.yy",},},
     {"id":{"name":"obj_Dagger_Slash","path":"objects/obj_Dagger_Slash/obj_Dagger_Slash.yy",},},
     {"id":{"name":"obj_Door","path":"objects/obj_Door/obj_Door.yy",},},
-    {"id":{"name":"obj_Icon_Health","path":"objects/obj_Icon_Health/obj_Icon_Health.yy",},},
     {"id":{"name":"obJ_Lighting","path":"objects/obJ_Lighting/obJ_Lighting.yy",},},
     {"id":{"name":"obj_Movement_Parent","path":"objects/obj_Movement_Parent/obj_Movement_Parent.yy",},},
     {"id":{"name":"obj_Play_Button","path":"objects/obj_Play_Button/obj_Play_Button.yy",},},
