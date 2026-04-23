@@ -25,6 +25,22 @@ function TermiteState_Attack_Dash(){
 	} else {
 		var _blocking_rock = instance_place(nx, ny, obj_Rock);
 		if (_blocking_rock != noone && !_blocking_rock.destroyed) {
+			// Apply rock damage directly — the lookahead stops us before we physically
+			// overlap, so the Collision_obj_Termite_Enemy event on obj_Rock never fires.
+			with (_blocking_rock) {
+				if (hit_cooldown <= 0) {
+					hits_taken++;
+					hit_cooldown = 45;
+					shake_timer  = shake_duration;
+					if      (hits_taken == 1) sprite_index = spr_Rock_Minor_Crack;
+					else if (hits_taken == 2) sprite_index = spr_Rock_Major_Crack;
+					else if (hits_taken == 3) sprite_index = spr_Rock_Chunked;
+					else if (hits_taken >= 4) {
+						destroyed    = true;
+						sprite_index = spr_Rock_Pieces;
+					}
+				}
+			}
 			hspeed = 0; vspeed = 0;
 			state = TERMITESTATE.COLLIDE;
 		}

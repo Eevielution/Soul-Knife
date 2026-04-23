@@ -1,3 +1,11 @@
+// ── Pause menu trigger ─────────────────────────────────────────────────────
+if (keyboard_check_pressed(vk_escape)
+    && instance_exists(obj_Player_Highlight)
+    && !instance_exists(obj_Pause_Menu)) {
+    instance_create_layer(0, 0, "Instances", obj_Pause_Menu);
+    exit;
+}
+
 if (!instance_exists(follow_target)) {
     if (variable_global_exists("currentPlayer") && instance_exists(global.currentPlayer)) {
         follow_target = global.currentPlayer;

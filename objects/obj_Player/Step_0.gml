@@ -18,7 +18,7 @@ if(attacking)
 {
 	movement_x = 0
 	movement_y = 0
-	if(frame_attack = 0)
+	if(frame_attack == 0)
 	{
 		attack_angle = point_direction(x, y, mouse_x, mouse_y)
 		if(attack_angle >= 225 && attack_angle <= 315)

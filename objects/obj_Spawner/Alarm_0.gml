@@ -18,6 +18,22 @@ var spawny2 = clamp(y + random_range(0, _half_h),  _safe, room_height - _safe);
 var _cp         = instance_exists(global.currentPlayer) ? global.currentPlayer : noone;
 var _spawn_dist = 48; // minimum pixels between spawn point and player
 
+// Wall-safety check helper — resamples a point up to 10 times if it's in a solid
+var _tries;
+
+_tries = 0;
+while (collision_circle(spawnx, spawny, 20, obj_Solid, false, true) != noone && _tries < 10) {
+    spawnx  = clamp(x + random_range(-_half_w, _half_w), _safe, room_width  - _safe);
+    spawny  = clamp(y + random_range(-_half_h, _half_h), _safe, room_height - _safe);
+    _tries++;
+}
+_tries = 0;
+while (collision_circle(spawnx2, spawny2, 20, obj_Solid, false, true) != noone && _tries < 10) {
+    spawnx2 = clamp(x + random_range(-_half_w, _half_w), _safe, room_width  - _safe);
+    spawny2 = clamp(y + random_range(-_half_h, _half_h), _safe, room_height - _safe);
+    _tries++;
+}
+
 if (is_big_room) {
     // Big room: pick one of three 2-enemy combos
     var combo = irandom(2); // 0=rat+rat, 1=termite+termite, 2=rat+termite
