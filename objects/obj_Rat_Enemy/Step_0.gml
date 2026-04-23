@@ -55,7 +55,7 @@ if(isPlayer)
 			image_index = 0
 			attack_angle = point_direction(x, y, mouse_x, mouse_y)
 		}
-		if(lengthdir_x(attack_angle, attack_angle) > 0)
+		if(lengthdir_x(1, attack_angle) > 0)
 		{
 			image_xscale = -.5
 		}
@@ -130,13 +130,14 @@ else
 		speed = 1.1
 		if(!instance_exists(obj_Player_Highlight) || global.currentPlayer.hp <= 0)
 		{
-			game_restart()
+			game_restart();
+			exit;
 		}
 		else
 		{
 			direction = point_direction(x, y, global.currentPlayer.x, global.currentPlayer.y)
 		}
-		if(lengthdir_x(direction, direction) > 0)
+		if(lengthdir_x(1, direction) > 0)
 		{
 			image_xscale = -.5
 			image_yscale = .5
@@ -161,11 +162,6 @@ else
 		else if(frame_attack >= 30 && frame_attack < 45)
 		{
 			speed = 3
-		}
-		else if(frame_attack > 45 && frame_attack < 75)
-		{
-			speed = 0
-			frame_attack = 0
 		}
 		else
 		{

@@ -17,12 +17,16 @@ for (var _i = 0; _i < _num_rocks; _i++) {
         // Reject if too close to any door
         var _near_door = false;
         with (obj_Door) {
-            if (point_distance(_rx, _ry, x, y) < 80) { _near_door = true; break; }
+            if (point_distance(_rx, _ry, x, y) < 80) _near_door = true;
         }
         if (_near_door) continue;
 
-        // Reject if overlapping an already-placed rock
-        if (place_meeting(_rx, _ry, obj_Rock)) continue;
+        // Reject if too close to an already-placed rock
+        var _too_close = false;
+        with (obj_Rock) {
+            if (point_distance(_rx, _ry, x, y) < 64) { _too_close = true; break; }
+        }
+        if (_too_close) continue;
 
         // Reject if on top of the player
         if (instance_exists(global.currentPlayer) &&

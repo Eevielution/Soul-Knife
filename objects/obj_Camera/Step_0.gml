@@ -1,6 +1,11 @@
 if (!instance_exists(follow_target)) {
-    if (instance_exists(obj_Player)) follow_target = obj_Player;
-    else exit;
+    if (variable_global_exists("currentPlayer") && instance_exists(global.currentPlayer)) {
+        follow_target = global.currentPlayer;
+    } else if (instance_exists(obj_Player)) {
+        follow_target = obj_Player;
+    } else {
+        exit;
+    }
 }
 
 if (!camera_locked) {

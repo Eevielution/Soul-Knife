@@ -1,1 +1,1 @@
-show_debug_message("Player hit door")
+// Door transition is handled via proximity check in Step_0

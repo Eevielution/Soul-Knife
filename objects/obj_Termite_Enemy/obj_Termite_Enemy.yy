@@ -43,7 +43,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_Termite_Side",
+    "path":"sprites/spr_Termite_Side/spr_Termite_Side.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
