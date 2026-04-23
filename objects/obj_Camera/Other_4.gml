@@ -12,7 +12,11 @@ bound_top    = 0;
 bound_right  = room_width;
 bound_bottom = room_height;
 
-if (instance_exists(obj_Player)) {
+if (variable_global_exists("currentPlayer") && instance_exists(global.currentPlayer)) {
+    follow_target = global.currentPlayer;
+    lead_x = 0;
+    lead_y = 0;
+} else if (instance_exists(obj_Player)) {
     follow_target = obj_Player;
     lead_x = 0;
     lead_y = 0;

@@ -58,11 +58,19 @@ if ((global.currentPlayer.object_index == obj_Rat_Enemy || global.currentPlayer.
 // ---- Point at nearest enemy, or face player's movement direction ----
 var _player = global.currentPlayer;
 
-// Find closest obj_Rat_Enemy
+// Find closest enemy (rat or termite), skipping whichever is the player
 var _nearest = noone;
 var _nearest_dist = infinity;
 with (obj_Rat_Enemy) {
-    if (id == global.currentPlayer) continue; // skip the player-rat
+    if (id == global.currentPlayer) continue;
+    var _d = point_distance(_player.x, _player.y, x, y);
+    if (_d < _nearest_dist) {
+        _nearest_dist = _d;
+        _nearest = id;
+    }
+}
+with (obj_Termite_Enemy) {
+    if (id == global.currentPlayer) continue;
     var _d = point_distance(_player.x, _player.y, x, y);
     if (_d < _nearest_dist) {
         _nearest_dist = _d;

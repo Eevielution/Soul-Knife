@@ -5,6 +5,7 @@ if (instance_exists(obj_Transition)) {
     if (hp <= 0) {
         audio_play_sound(snd_gameover, 1, false);
         room_goto(rm_Game_Over);
+        exit;
     }
     hp -= bleed_rate;
     hp = max(hp, 0);
@@ -17,10 +18,9 @@ if(attacking)
 {
 	movement_x = 0
 	movement_y = 0
-	if(frame_attack = 0)
+	if(frame_attack == 0)
 	{
 		attack_angle = point_direction(x, y, mouse_x, mouse_y)
-		show_debug_message(attack_angle)
 		if(attack_angle >= 225 && attack_angle <= 315)
 		{
 			sprite_index = spr_Khile_Down_Slash
@@ -87,7 +87,8 @@ if (hit_cooldown > 0) hit_cooldown -= 1;
 
 if (hp <= 0) {
 	audio_play_sound(snd_gameover, 1, false);
-	room_goto(rm_Game_Over)
+	room_goto(rm_Game_Over);
+	exit;
 }
 
 // Bleed — constant HP drain

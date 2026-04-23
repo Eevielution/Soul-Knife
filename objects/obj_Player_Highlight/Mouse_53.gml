@@ -4,7 +4,6 @@ if(!cooldown)
 	{
 		if(knifeOut)
 		{
-			show_debug_message("attacking")
 			global.currentPlayer.attacking = true
 			// Random slash sound
 			var _slash_sounds = [snd_slash1, snd_slash2, snd_slash3];
