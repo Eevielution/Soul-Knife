@@ -12,3 +12,5 @@ fire_interval = 180; // base value; actual interval is chosen from head's HP eac
 
 open_timer    = 0;   // frames remaining in the "open" firing flash
 open_duration = 25;
+
+image_speed = 6;

@@ -60,6 +60,12 @@ if (isPlayer) {
 	hp -= bleed_rate;
 	hp = max(hp, 0);
 	if (hp <= 0) {
+		// Boss killed the termite form — restart cleanly instead of reverting
+		if (variable_global_exists("killed_by_boss") && global.killed_by_boss) {
+			global.killed_by_boss = false;
+			game_restart();
+			exit;
+		}
 		// Termite body spent — revert to human
 		var _rx = x;
 		var _ry = y;

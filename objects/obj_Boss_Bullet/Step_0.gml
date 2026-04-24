@@ -11,6 +11,7 @@ if (variable_global_exists("currentPlayer") && instance_exists(global.currentPla
         if (_p.hit_cooldown <= 0) {
             _p.hp         -= 5;
             _p.hit_cooldown = 60;
+            if (_p.hp <= 0) global.killed_by_boss = true;
         }
         instance_destroy();
         exit;

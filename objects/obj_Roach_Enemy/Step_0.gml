@@ -7,5 +7,6 @@ if(global.roachKill >= 15)
 	    _cp.hp = min(_cp.hp + 10, _cp.max_hp);
 	}
 	global.creatures_slain++;
+	global.roachKill = 0; // reset for the next roach
 	instance_destroy()
 }

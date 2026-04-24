@@ -33,3 +33,8 @@ if (!destroyed) {
         }
     }
 }
+
+
+if (sprite_index == spr_Rock_Pieces){
+	solid = false;
+}

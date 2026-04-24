@@ -5,15 +5,10 @@ y += lengthdir_y(move_spd, head_dir);
 x = clamp(x, 16, room_width  - 16);
 y = clamp(y, 16, room_height - 16);
 
-// ── Write history AFTER moving (distance-based) ───────────────────────────────
-// One entry per segment_step_dist pixels so body spacing is always ~14 px.
-if (point_distance(x, y, last_hist_x, last_hist_y) >= segment_step_dist) {
-    pos_history_x[@ history_head] = x;
-    pos_history_y[@ history_head] = y;
-    last_hist_x  = x;
-    last_hist_y  = y;
-    history_head = (history_head + 1) mod max_history;
-}
+// ── Write position to history every step ──────────────────────────────────────────
+pos_history_x[@ history_head] = x;
+pos_history_y[@ history_head] = y;
+history_head = (history_head + 1) mod max_history;
 
 // ── Turn cooldown ─────────────────────────────────────────────────────────────
 if (turn_cd > 0) turn_cd--;
@@ -100,6 +95,7 @@ if (variable_global_exists("currentPlayer") && instance_exists(global.currentPla
         if (_p.hit_cooldown <= 0) {
             _p.hp         -= 8;
             _p.hit_cooldown = 60;
+            if (_p.hp <= 0) global.killed_by_boss = true;
         }
     }
 }

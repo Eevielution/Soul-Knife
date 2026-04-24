@@ -7,7 +7,9 @@ global.human_hp         = 50; // saved human HP when transforming into a rat
 global.rooms_visited    = 0;  // 0 = first (safe) room
 global.creatures_slain  = 0;  // total enemy kills (not transforms)
 global.transition_room  = -1; // target room for the next transition
-global.boss_countdown   = 1;//irandom_range(5, 10); // rooms until the centipede boss spawns
+global.boss_countdown   = irandom_range(5, 10); // rooms until the centipede boss spawns
+global.killed_by_boss   = false; // set true when centipede damage kills the player
+global.roachKill        = 0;     // mini-roaches killed toward defeating the current roach
 
 // Volume globals (0.0 – 1.0)
 global.vol_master = 1.0;

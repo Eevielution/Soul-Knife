@@ -60,4 +60,19 @@ if (_prev_horiz == _next_horiz) {
 
 // Flash yellow briefly after this segment fires
 var _tint = (open_timer > 0) ? c_yellow : c_white;
-draw_sprite_ext(_spr, 0, x, y, _xs, _ys, 0, _tint, 1);
+
+// Animate at 6 fps using current_time
+var _frame = (current_time div 166) mod sprite_get_number(_spr);
+
+// Origin-compensated draw position
+var _ox = sprite_get_xoffset(_spr);
+var _oy = sprite_get_yoffset(_spr);
+var _draw_x = x - (8 - _ox) * _xs;
+var _draw_y = y - (8 - _oy) * _ys;
+
+// Glow pass
+gpu_set_blendmode(bm_add);
+draw_sprite_ext(_spr, _frame, _draw_x, _draw_y, _xs * 1.15, _ys * 1.15, 0, c_teal, 0.25);
+gpu_set_blendmode(bm_normal);
+
+draw_sprite_ext(_spr, _frame, _draw_x, _draw_y, _xs, _ys, 0, _tint, 1);
