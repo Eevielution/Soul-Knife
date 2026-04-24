@@ -3,6 +3,8 @@
   "%Name":"obj_Quit_Button",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_Quit_Button",
@@ -33,9 +35,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Quit_Button",
-    "path":"sprites/spr_Quit_Button/spr_Quit_Button.yy",
+    "name":"spr_Quit_Unselected",
+    "path":"sprites/spr_Quit_Unselected/spr_Quit_Unselected.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_Quit_Unselected",
+    "path":"sprites/spr_Quit_Unselected/spr_Quit_Unselected.yy",
+  },
   "visible":true,
 }

@@ -121,6 +121,8 @@
     {"id":{"name":"spr_Options_Arrow","path":"sprites/spr_Options_Arrow/spr_Options_Arrow.yy",},},
     {"id":{"name":"spr_Original_Player","path":"sprites/spr_Original_Player/spr_Original_Player.yy",},},
     {"id":{"name":"spr_Play_Button","path":"sprites/spr_Play_Button/spr_Play_Button.yy",},},
+    {"id":{"name":"spr_Play_Selected","path":"sprites/spr_Play_Selected/spr_Play_Selected.yy",},},
+    {"id":{"name":"spr_Play_Unselected","path":"sprites/spr_Play_Unselected/spr_Play_Unselected.yy",},},
     {"id":{"name":"spr_Player_Highlight","path":"sprites/spr_Player_Highlight/spr_Player_Highlight.yy",},},
     {"id":{"name":"spr_Quit_Button","path":"sprites/spr_Quit_Button/spr_Quit_Button.yy",},},
     {"id":{"name":"spr_Quit_Selected","path":"sprites/spr_Quit_Selected/spr_Quit_Selected.yy",},},
