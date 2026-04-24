@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"spr_Torch_Light",
   "bboxMode":0,
-  "bbox_bottom":23,
+  "bbox_bottom":21,
   "bbox_left":7,
   "bbox_right":24,
   "bbox_top":4,
@@ -19,7 +19,8 @@
   "height":32,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"840e05a0-c202-4cd9-a72a-352ca516c0b1","blendMode":0,"displayName":"default","isLocked":false,"name":"840e05a0-c202-4cd9-a72a-352ca516c0b1","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"1af89d49-a1a0-4954-ada0-8d5690ee0a9e","blendMode":0,"displayName":"default (2)","isLocked":false,"name":"1af89d49-a1a0-4954-ada0-8d5690ee0a9e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"840e05a0-c202-4cd9-a72a-352ca516c0b1","blendMode":0,"displayName":"default","isLocked":false,"name":"840e05a0-c202-4cd9-a72a-352ca516c0b1","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"spr_Torch_Light",
   "nineSlice":null,

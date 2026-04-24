@@ -20,6 +20,7 @@
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"93b42a50-6c1e-4a11-b959-73bea818bb9d","blendMode":0,"displayName":"default","isLocked":false,"name":"93b42a50-6c1e-4a11-b959-73bea818bb9d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"df3adab3-9829-4c5a-b151-d80090d35a7e","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"df3adab3-9829-4c5a-b151-d80090d35a7e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_Khile_Icon",
   "nineSlice":null,
