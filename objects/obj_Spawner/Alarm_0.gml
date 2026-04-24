@@ -43,7 +43,6 @@ if (is_big_room) {
     var combos = [
         [obj_Rat_Enemy,     obj_Rat_Enemy],
         [obj_Termite_Enemy, obj_Termite_Enemy],
-        [obj_Roach_Enemy,   obj_Roach_Enemy],
         [obj_Rat_Enemy,     obj_Termite_Enemy],
         [obj_Rat_Enemy,     obj_Roach_Enemy],
         [obj_Termite_Enemy, obj_Roach_Enemy]
