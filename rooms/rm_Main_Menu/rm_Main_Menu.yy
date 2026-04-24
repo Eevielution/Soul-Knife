@@ -6,9 +6,9 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
+    {"name":"inst_79AD56C1","path":"rooms/rm_Main_Menu/rm_Main_Menu.yy",},
     {"name":"inst_71DBF5A3","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"b","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_79AD56C1","path":"rooms/rm_Main_Menu/rm_Main_Menu.yy",},
   ],
   "isDnd":false,
   "layers":[
