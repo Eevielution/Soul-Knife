@@ -16,7 +16,6 @@
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"centipedeSprites","folderPath":"folders/Sprites/centipedeSprites.yy","name":"centipedeSprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"khileSprites","folderPath":"folders/Sprites/khileSprites.yy","name":"khileSprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"optionsMenu","folderPath":"folders/Sprites/optionsMenu.yy","name":"optionsMenu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Controls","folderPath":"folders/Sprites/optionsMenu/Controls.yy","name":"Controls","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -89,16 +88,7 @@
     {"id":{"name":"snd_slash3","path":"sounds/snd_slash3/snd_slash3.yy",},},
     {"id":{"name":"snd_transform","path":"sounds/snd_transform/snd_transform.yy",},},
     {"id":{"name":"spr_Background_Label","path":"sprites/spr_Background_Label/spr_Background_Label.yy",},},
-<<<<<<< Updated upstream
     {"id":{"name":"spr_BigRock","path":"sprites/spr_BigRock/spr_BigRock.yy",},},
-=======
-    {"id":{"name":"spr_Centipede_Body_Corner","path":"sprites/spr_Centipede_Body_Corner/spr_Centipede_Body_Corner.yy",},},
-    {"id":{"name":"spr_Centipede_Body_Horizontal","path":"sprites/spr_Centipede_Body_Horizontal/spr_Centipede_Body_Horizontal.yy",},},
-    {"id":{"name":"spr_Centipede_Body_Vertical","path":"sprites/spr_Centipede_Body_Vertical/spr_Centipede_Body_Vertical.yy",},},
-    {"id":{"name":"spr_Centipede_Bullet","path":"sprites/spr_Centipede_Bullet/spr_Centipede_Bullet.yy",},},
-    {"id":{"name":"spr_Centipede_Head_Horizontal","path":"sprites/spr_Centipede_Head_Horizontal/spr_Centipede_Head_Horizontal.yy",},},
-    {"id":{"name":"spr_Centipede_Head_Vertical","path":"sprites/spr_Centipede_Head_Vertical/spr_Centipede_Head_Vertical.yy",},},
->>>>>>> Stashed changes
     {"id":{"name":"spr_Controls_Diagram","path":"sprites/spr_Controls_Diagram/spr_Controls_Diagram.yy",},},
     {"id":{"name":"spr_Controls_Selected","path":"sprites/spr_Controls_Selected/spr_Controls_Selected.yy",},},
     {"id":{"name":"spr_Controls_Unselected","path":"sprites/spr_Controls_Unselected/spr_Controls_Unselected.yy",},},
