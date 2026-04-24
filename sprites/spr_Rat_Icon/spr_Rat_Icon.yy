@@ -19,7 +19,9 @@
   "height":64,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"6e7e0862-495a-494b-92a5-987f966ed468","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"6e7e0862-495a-494b-92a5-987f966ed468","opacity":44.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"670406f1-9627-400f-9085-1b4fd0739789","blendMode":0,"displayName":"default","isLocked":false,"name":"670406f1-9627-400f-9085-1b4fd0739789","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"daa18530-5abb-4a89-8500-165eb0bf5edd","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"daa18530-5abb-4a89-8500-165eb0bf5edd","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_Rat_Icon",
   "nineSlice":null,

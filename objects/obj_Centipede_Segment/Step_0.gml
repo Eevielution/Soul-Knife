@@ -65,7 +65,6 @@ if (variable_global_exists("currentPlayer") && instance_exists(global.currentPla
     if (point_distance(x, y, _p.x, _p.y) < 14) {
         if (_p.hit_cooldown <= 0) {
             _p.hp         -= 3;
-            _p.hit_cooldown = 60;
-        }
+            _p.hit_cooldown = 60;            if (_p.hp <= 0) global.killed_by_boss = true;        }
     }
 }

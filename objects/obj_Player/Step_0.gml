@@ -87,7 +87,12 @@ if (hit_cooldown > 0) hit_cooldown -= 1;
 
 if (hp <= 0) {
 	audio_play_sound(snd_gameover, 1, false);
-	room_goto(rm_Game_Over);
+	if (variable_global_exists("killed_by_boss") && global.killed_by_boss) {
+		global.killed_by_boss = false;
+		game_restart(); // game_restart destroys the persistent camera and resets all globals
+	} else {
+		room_goto(rm_Game_Over);
+	}
 	exit;
 }
 

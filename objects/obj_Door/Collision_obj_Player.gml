@@ -8,16 +8,16 @@ global.entry_door_side = opp_sides[loc_name];
 var candidates;
 switch (global.entry_door_side) {
     case 0: // TOP door
-        candidates = [rm_16x9, rm_16x18, rm_18x32];
+        candidates = [rm_16x9, rm_16x18, rm_18x32, rm_Roach];
         break;
     case 1: // BOTTOM door
-        candidates = [rm_16x9, rm_16x18, rm_18x32, rm_L];
+        candidates = [rm_16x9, rm_16x18, rm_18x32, rm_Roach, rm_L];
         break;
     case 2: // LEFT door
-        candidates = [rm_16x9, rm_16x18, rm_18x32];
+        candidates = [rm_16x9, rm_16x18, rm_18x32, rm_Roach];
         break;
     case 3: // RIGHT door
-        candidates = [rm_16x9, rm_16x18, rm_18x32, rm_L];
+        candidates = [rm_16x9, rm_16x18, rm_18x32, rm_Roach, rm_L];
         break;
     default:
         show_debug_message("obj_Door: invalid loc_name " + string(loc_name));
