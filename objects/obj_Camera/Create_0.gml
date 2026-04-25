@@ -63,17 +63,18 @@ view_visible[0] = true;
 // Always create a fresh camera via camera_create() so it is NOT auto-destroyed
 // when leaving a room (room-assigned cameras in view_camera[0] are destroyed on room change).
 cam = camera_create();
+// Set size and position BEFORE assigning to view_camera[0].
+// HTML5 crashes on the very first render if the camera has no size defined.
+// Use full viewport size here (main menu, no zoom); Room Start re-applies
+// the correct zoom size when entering game rooms.
+camera_set_view_size(cam, viewport_width, viewport_height);
+camera_set_view_pos(cam, 0, 0);
 view_camera[0] = cam;
 
-camera_set_view_size(cam, cam_width, cam_height);
 view_set_wport(0, viewport_width);
 view_set_hport(0, viewport_height);
 
 gpu_set_tex_filter(false);
-surface_resize(application_surface, viewport_width, viewport_height);
-display_reset(0, true);
-
-window_set_size(viewport_width, viewport_height);
 alarm[0] = 1;
 
 if (instance_exists(obj_Player)) {
@@ -89,7 +90,3 @@ target_y = cam_y;
 
 bound_right  = room_width;
 bound_bottom = room_height;
-
-var _final_x = cam_x - cam_width  * 0.5;
-var _final_y = cam_y - cam_height * 0.5;
-camera_set_view_pos(cam, _final_x, _final_y);
