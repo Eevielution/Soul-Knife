@@ -60,10 +60,10 @@ camera_debug_mode = false;
 view_enabled    = true;
 view_visible[0] = true;
 
-if (!view_camera[0] || view_camera[0] == -1) {
-    view_camera[0] = camera_create();
-}
-cam = view_camera[0];
+// Always create a fresh camera via camera_create() so it is NOT auto-destroyed
+// when leaving a room (room-assigned cameras in view_camera[0] are destroyed on room change).
+cam = camera_create();
+view_camera[0] = cam;
 
 camera_set_view_size(cam, cam_width, cam_height);
 view_set_wport(0, viewport_width);

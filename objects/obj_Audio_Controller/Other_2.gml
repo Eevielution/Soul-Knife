@@ -1,3 +1,6 @@
+// Restore render state after game_restart() — HTML5 may retain the previous session's state.
+application_surface_draw_enable(true);
+
 global.bgm_inst = audio_play_sound(bgm_Main_Theme_2_22_26, 1, true);
 
 // Initialize globals

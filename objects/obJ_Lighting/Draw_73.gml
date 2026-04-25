@@ -8,9 +8,13 @@ if(!surface_exists(self.light_surface)){
 }
 surface_set_target(self.light_surface);
 
-draw_clear(c_black);
+// c_gray (50% grey) ambient matches the desktop "50% dim outside torch" look.
+// With bm_multiply: grey * scene = 50% dim, white (torch area) * scene = full bright.
+draw_clear(c_gray);
 camera_apply(camera);
-gpu_set_blendmode(bm_subtract);
+// bm_add works correctly in HTML5/WebGL: adds light onto the black surface
+// (bm_subtract would compute black-src = negative, clamped to black in WebGL)
+gpu_set_blendmode(bm_add);
 var scalex;
 var scaley;
 

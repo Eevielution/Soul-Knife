@@ -1,3 +1,4 @@
+if (!instance_exists(obj_Player_Highlight)) exit;
 point = angle_difference(direction, point_direction(x, y, obj_Player_Highlight.x, obj_Player_Highlight.y))
 if(point < 5 && point < 180)
 {
