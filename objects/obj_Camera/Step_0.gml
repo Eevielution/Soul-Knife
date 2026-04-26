@@ -10,21 +10,18 @@ if (!instance_exists(follow_target)) {
     if (variable_global_exists("currentPlayer") && instance_exists(global.currentPlayer)) {
         follow_target = global.currentPlayer;
     } else if (instance_exists(obj_Player)) {
-        follow_target = obj_Player;
+        follow_target = instance_find(obj_Player, 0);
     } else {
         exit;
     }
-}
 
-if (!camera_locked) {
-    target_x = follow_target.x;
-    target_y = follow_target.y;
-    cam_x = lerp(cam_x, target_x, follow_speed);
-    cam_y = lerp(cam_y, target_y, follow_speed);
+    // Target was reacquired (often after transforms/room changes):
+    // snap internal state so the camera does not lerp from stale coordinates.
+    cam_x = follow_target.x;
+    cam_y = follow_target.y;
+    target_x = cam_x;
+    target_y = cam_y;
 }
-
-prev_x = cam_x;
-prev_y = cam_y;
 
 if (!camera_locked && instance_exists(follow_target)) {
 
@@ -36,8 +33,10 @@ if (!camera_locked && instance_exists(follow_target)) {
         var target_lead_y = 0;
 
         if (variable_instance_exists(follow_target, "hsp") && variable_instance_exists(follow_target, "vsp")) {
-            target_lead_x = sign(follow_target.hsp) * lead_amount;
-            target_lead_y = sign(follow_target.vsp) * lead_amount;
+            var _fhsp = variable_instance_get(follow_target, "hsp");
+            var _fvsp = variable_instance_get(follow_target, "vsp");
+            target_lead_x = sign(_fhsp) * lead_amount;
+            target_lead_y = sign(_fvsp) * lead_amount;
         }
 
         lead_x = lerp(lead_x, target_lead_x, lead_smoothing);

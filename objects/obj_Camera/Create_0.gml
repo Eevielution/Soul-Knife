@@ -78,9 +78,9 @@ gpu_set_tex_filter(false);
 alarm[0] = 1;
 
 if (instance_exists(obj_Player)) {
-    follow_target = obj_Player;
-    cam_x = obj_Player.x;
-    cam_y = obj_Player.y;
+    follow_target = instance_find(obj_Player, 0);
+    cam_x = follow_target.x;
+    cam_y = follow_target.y;
 } else {
     cam_x = room_width  * 0.5;
     cam_y = room_height * 0.5;

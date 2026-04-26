@@ -1,3 +1,10 @@
+// Rooms can override view settings/camera bindings. Re-assert ours every room start.
+view_enabled = true;
+view_visible[0] = true;
+// Recreate and rebind every room start for runtime compatibility.
+cam = camera_create();
+view_camera[0] = cam;
+
 // Main menu: show the full 1280x720 view with no zoom or follow.
 if (room == rm_Main_Menu) {
     camera_set_view_size(cam, viewport_width, viewport_height);
@@ -39,7 +46,7 @@ if (variable_global_exists("currentPlayer") && instance_exists(global.currentPla
     lead_x = 0;
     lead_y = 0;
 } else if (instance_exists(obj_Player)) {
-    follow_target = obj_Player;
+    follow_target = instance_find(obj_Player, 0);
     lead_x = 0;
     lead_y = 0;
 }

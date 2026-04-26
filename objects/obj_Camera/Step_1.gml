@@ -1,3 +1,8 @@
+// Safety: keep our camera bound to view 0 after transitions.
+if (view_camera[0] != cam) {
+	view_camera[0] = cam;
+}
+
 // No follow target means a static-view room (e.g. main menu).
 // Room Start already set camera_set_view_pos to the correct position — don't override it.
 if (follow_target == noone) exit;
